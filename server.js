@@ -18,8 +18,8 @@
       type: 'raw',
       stream: bunyan_lumber({
         tlsOptions: {
-          host: process.env.LOGSTASH_HOST,
-          port: process.env.LOGSTASH_PORT,
+          host: 'elk.mids',
+          port: 5000,
           ca: [fs.readFileSync('/etc/ssl/logstash-forwarder.crt', {
               encoding: 'utf-8'
             })]
