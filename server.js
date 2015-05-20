@@ -20,7 +20,7 @@
         tlsOptions: {
           host: process.env.LOGSTASH_HOST,
           port: process.env.LOGSTASH_PORT,
-          ca: [fs.readFileSync('/tmp/logstash-forwarder.crt', {
+          ca: [fs.readFileSync('/etc/ssl/logstash-forwarder.crt', {
               encoding: 'utf-8'
             })]
         }

@@ -14,4 +14,4 @@ In the project directory, build the docker image with:
 
 Once built, start the container from the image with:
 
-    docker run -d --name loggen -v 80:80 -t loggen -e "LOGSTASH_HOST=<destination_host>" -e LOGSTASH_PORT="<destination_port>"
+    docker run -d --name loggen -p 80:80 -e "LOGSTASH_HOST=<some_ip>" -e LOGSTASH_PORT="80" -t loggen
